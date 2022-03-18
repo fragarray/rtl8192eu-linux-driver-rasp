@@ -1,11 +1,7 @@
 #! /usr/bin/env bash
 echo "Installando dipendenze"
 sudo apt-get install git raspberrypi-kernel-headers build-essential dkms -y
-for c in "sudo" "mktemp" "git" "dkms"; do
-    command -v $c >/dev/null 2>&1 || { echo >&2 "Script uses $c, but it's not installed. Aborting."; exit 1; }
-done
 sudo echo # pre-authorise sudo
-cd $(mktemp -d)
 echo "Clonando driver
 git clone --depth 1 https://github.com/fragarray/rtl8192eu-linux-driver-rasp.git
 cd rtl8192eu-linux-driver-rasp
