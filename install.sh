@@ -3,7 +3,7 @@ echo "Installando dipendenze"
 sudo apt-get install git raspberrypi-kernel-headers build-essential dkms -y
 sudo echo # pre-authorise sudo
 echo "Clonando driver"
-git clone --depth 1 https://github.com/fragarray/rtl8192eu-linux-driver-rasp.git
+git clone https://github.com/fragarray/rtl8192eu-linux-driver-rasp.git
 cd rtl8192eu-linux-driver-rasp
 echo "Aggiungendo DKMS"
 sudo dkms add .
