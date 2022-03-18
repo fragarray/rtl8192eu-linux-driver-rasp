@@ -15,4 +15,3 @@ echo -e "8192eu\n\nloop" | sudo tee /etc/modules
 echo "options 8192eu rtw_power_mgnt=0 rtw_enusbss=0" | sudo tee /etc/modprobe.d/8192eu.conf
 echo "UPDATE INITRAMS"
 sudo update-initramfs -u
-echo "RIAVVIARE"
